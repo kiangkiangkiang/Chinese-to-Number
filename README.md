@@ -49,12 +49,33 @@ cn2an
 
 ** 歡迎參考 example.py **
 
-### 使用 CLI 工具
-
-### 使用 Python 模組
-
-```python
-# 在這裡加入您的程式碼範例和使用說明
+### 1. 下載 github 文件
+``` git
+git clone git@github.com:kiangkiangkiang/Chinese-to-Number.git
+```
+```
+cd Chinese-to-Number
 ```
 
+### 2. 下載所需套件
 
+```
+pip install -r requirements.txt
+```
+
+### 3.1 CLI 執行
+```
+python number_converter.py --money YOUR_MONEY
+```
+- YOUR_MONEY：任意「中文數字簡體繁體的字串」，例如「9萬5千」
+### 3.2 使用 Python 模組
+
+```python
+from number_converter import NumberConverter
+
+my_converted = NumberConverter()
+ANY_MONEY = "五千六百萬"
+my_converted.convert_to_number(ANY_MONEY)
+```
+
+#### 詳細轉換結果可參考 example.py
