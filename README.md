@@ -19,21 +19,21 @@
 1. 中文型態字串
 - 輸入：「五萬零五」
 ```
-python number_converter.py --money 五萬零五
+python number_converter.py --number 五萬零五
 ```
  - 輸出：50005
 
 2. 中文數字參雜
 - 輸入：「150萬5002」
 ```
-python number_converter.py --money 150萬5002
+python number_converter.py --number 150萬5002
 ```
  - 輸出：15005002
 
 3. 中文數字簡體繁體全形半形參雜
 - 輸入：「6千參佰零陸万４仟０貳」
 ```
-python number_converter.py --money 6千參佰零陸万４仟０貳
+python number_converter.py --number 6千參佰零陸万４仟０貳
 ```
  - 輸出：63064002
 
@@ -65,17 +65,17 @@ pip install -r requirements.txt
 
 ### 3.1 CLI 執行
 ```
-python number_converter.py --money YOUR_MONEY
+python number_converter.py --number YOUR_NUMBER
 ```
-- YOUR_MONEY：任意「中文數字簡體繁體的字串」，例如「9萬5千」
+- YOUR_NUMBER：任意「中文數字簡體繁體的字串」，例如「9萬5千」
 ### 3.2 使用 Python 模組
 
 ```python
 from number_converter import NumberConverter
 
 my_converted = NumberConverter()
-ANY_MONEY = "五千六百萬"
-my_converted.convert_to_number(ANY_MONEY)
+ANY_NUMBER = "五千六百萬"
+my_converted.convert_to_number(ANY_NUMBER)
 ```
 
 #### 詳細轉換結果可參考 example.py
